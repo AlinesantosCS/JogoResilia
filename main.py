@@ -1,3 +1,4 @@
+
 print('~'*60)
 print("{0:^60}".format('BEM VINDO A VIDA DE PROGRAMADOR'))
 print('~'*60)
@@ -5,6 +6,7 @@ print('~'*60)
 print("{0:*^60}".format('VIDA SAUDÁVEL'))
 
 print("{0:^60}".format("\nSeu sonho é trabalhar em lugar possa ser valorizado e que goste de trabalhar.\n Para que seu objetivo possa chegar em algum lugar é decidido que comece a estudar."))
+print("{0:*^60}".format('~ No final do jogo você vai ver qual personagem é próximo ao seu comportamento <3 ~'))
 
 print("... Algum tempo depois houve uma oportunidade de um curso de programação gratuita...")
 
@@ -19,7 +21,6 @@ def cenarioPrincipal():
 
     return alternativa
 
-
 def cenarioConseguencias():
     alternativa = cenarioPrincipal()
     total = 0
@@ -32,7 +33,6 @@ def cenarioConseguencias():
 
     print(total)
 
-    
     if alternativa == '1':
 
         # SEGUNDO CENÁRIO - CASO FOR 1
@@ -92,48 +92,78 @@ def cenarioConseguencias():
             total+=10
         elif alternativa == '3':
             total+=20
-      
 
+            
+      
     return total
 
 def desejaJogarNovamente():
     jogarNovamente = 'S'
-    while(jogarNovamente == 'S'):
+    while(jogarNovamente.upper() == 'S'):
         print('Jogar novamente ? - S ou N')
         jogaDeNovo = input('Digite a opção: ')
-        if jogaDeNovo == 'S':
+        if jogaDeNovo.upper() == 'S':
             jogaDeNovo = cenarioConseguencias()
         else:
             ('FIM DE JOGO')
-            print(jogaDeNovo)
             break
-    
-
-     
-
+       
 resultadoCenario = cenarioConseguencias()
-jogueNovamente = desejaJogarNovamente()
+desejaJogarNovamente()
+if resultadoCenario >= 40:
+    
+    print('\n\n\nVocê combina com o personagem LISA SIMPSON')
+    print('Bastante inteligente e determinada(o)!\n')
+    
+   
+elif resultadoCenario >= 20:
+    
+    print('\n\n\nVocê combina com o personagem SHIKAMARU NARA')
+    print('Preguiçoso, mas com grande potencial, encontre a sua motivação e atinja o seu melhor!\n')
+    
+   
+elif resultadoCenario < 20 :
+    
+    print('\n\n\nVocê combina com o personagem CORAGEM, O CÃO COVARDE')
+    print('Bastante estressada, emocionalmente cansada só que com bastante coragem para mudar\n')
+    
+   
 
-if resultadoCenario >= 20:
-    print('CENÁRIO ESCRITÓRIO DO IFOOD')
-    print('ESTARÁ FELIZ DA VIDA OLHANDO PELA JANELA EM ')
+
+if resultadoCenario >= 40:
+    print('~'*70)
+    print("{0:^60}".format('CENÁRIO ESCRITÓRIO'))
+    print('ESTARÁ FELIZ DA VIDA NO ESCRITÓRIO DO IFOOD, OLHANDO PELA JANELINHA ')
+    print('~'*70)
+    print(f' PONTUAÇÃO: {resultadoCenario}')   
+elif resultadoCenario == 30:
+    print('~'*60)
+    print("{0:^60}".format('CENÁRIO ESCRITÓRIO'))
+    print('VOCÊ VIROU UM FARIA LIMER, TRABALHANDO EM ALGUM BANCO DIGITAL POR LÁ')
+    print('~'*60)
     print(f' PONTUAÇÃO: {resultadoCenario}')
-elif resultadoCenario >= 10:
-    print('CENÁRIO CASSINHA')
-    print('TENDÊNCIA A PROCRASTINAÇÃO, INFELIZMENTE DEIXOU VOCÊ DESEMPREGADA(O)')
+elif resultadoCenario == 22:
+    print('~'*90)
+    print("{0:^60}".format('CENÁRIO CASINHA'))
+    print('VOCÊ INFELIZMENTE CONTINUA DESEMPREGADO POR CONTA DA PROCRASTINAÇÃO, MAS COM VONTADE DE MUDAR E CONTINUAR NA CARREIRA')
+    print('~'*90)
     print(f' PONTUAÇÃO: {resultadoCenario}')
-elif resultadoCenario <= 9:
-    print('CENÁRIO HOSPITAL')
-    print('VOCÊ PAROU EM HOSPITAL POR SOBRECARGA DE ESTRESSE')
+elif resultadoCenario == 20:
+    print('~'*90)
+    print("{0:^60}".format('CENÁRIO CASINHA'))
+    print('VOCÊ INFELIZMENTE CONTINUA DESEMPREGADO POR CONTA DA PROCRASTINAÇÃO E DESISTIU DA CARREIRA')
+    print('~'*90)
     print(f' PONTUAÇÃO: {resultadoCenario}')
-
-
-
-
-
-
-
-
-
-
+elif resultadoCenario == 12:
+    print('~'*60)
+    print("{0:^60}".format('CENÁRIO HOSPITAL'))
+    print('VOCÊ SOFREU BURNOUT, MAS VAI SOBREVIVER')
+    print('~'*60)
+    print(f' PONTUAÇÃO: {resultadoCenario}')
+elif resultadoCenario == 4:
+    print('~'*60)
+    print("{0:^60}".format('CENÁRIO HOSPITAL'))
+    print('VOCÊ INFARTOU E INFELIZMENTE MORREU')
+    print('~'*60)
+    print(f' PONTUAÇÃO: {resultadoCenario}')
 
