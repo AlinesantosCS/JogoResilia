@@ -1,4 +1,3 @@
 # JogoResilia
 <center><img src="vida.png"></center>
-
-![MARKDOWN](fluxograma.png)
+<img src=”fluxograma.png” width = "1000px">
