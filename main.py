@@ -40,11 +40,11 @@ def cenarioConseguencias():
         print("{0:^60}".format('CADÊ SUAS PRIORIDADES ?'))
         print('~'*60)
 
-        print('Está dividido entre aos afazeres da casa eo curso, qual dessas alternativas tem a melhor opção ?')
+        print('Está dividido entre aos afazeres da casa e o curso, qual dessas alternativas tem a melhor opção ?')
 
         print('1 - Escolhe ambos, no entanto terá um preço de estudar até de madrugada.')
         print('2 - Diminui o horário para estudar e prioriza limpar a casa')
-        print('3 - Diminui o horário para limpar a casa e priorizaos estudos')
+        print('3 - Diminui o horário para limpar a casa e prioriza os estudos')
         alternativa =input('Escolha um número: ')
         if alternativa == '1':
             total+=2
